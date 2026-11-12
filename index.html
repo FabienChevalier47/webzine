@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pixel Art - Webzine Jeu Vidéo</title>
   </head>
   <body>
     <header id="main-header">
@@ -12,7 +12,7 @@
         width="60"
         height="60"
         viewBox="0 0 100 100"
-        xmlns="http://w3.org"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <circle cx="50" cy="50" r="45" fill="#F4A261" />
         <rect x="20" y="30" width="60" height="40" fill="#264653" />
@@ -21,16 +21,16 @@
       <nav class="navbar">
         <ul class="nav-list">
           <li class="nav-item">
-            <a href>Accueil</a>
+            <a href="#hero-section">Accueil</a>
           </li>
           <li class="nav-item">
-            <a href>Actualités</a>
+            <a href="#latest-posts">Actualités</a>
           </li>
           <li class="nav-item">
-            <a href>Podcast</a>
+            <a href="#media-center">Podcast</a>
           </li>
           <li class="nav-item">
-            <a href>Contact</a>
+            <a href="#main-footer">Contact</a>
           </li>
         </ul>
       </nav>
@@ -40,9 +40,9 @@
         <h2>À la une</h2>
         <p>
           Bienvenue sur le site dédié à l'actualité
-          <strong>vidéoludique</strong>, aux
+          <mark>vidéoludique</mark>, aux
           <abbr title="Role Playing Game">RPG</abbr> et aux créations
-          <strong>indépendantes</strong>.
+          <mark>indépendantes</mark>.
         </p>
         <p>
           Retrouvez nos tests <br />
@@ -66,7 +66,7 @@
             </p>
           </header>
           <figure class="post-thumbnail">
-            <img src="images/CO.png" />
+            <img src="images/CO.png" alt=" image du jeu Clair Obscur" />
             <figcaption>Clair Obscur</figcaption>
           </figure>
           <p>
@@ -93,7 +93,7 @@
             </p>
           </header>
           <figure class="post-thumbnail">
-            <img src="images/pix.png" />
+            <img src="images/pix.png" alt="image d'un jeu en 2D" />
             <figcaption>Un pti jeu indé tout mignon.</figcaption>
           </figure>
           <p>
@@ -121,7 +121,7 @@
             </p>
           </header>
           <figure class="post-thumbnail">
-            <img src="images/es.png" />
+            <img src="images/es.png" alt="image d'une compétition" />
             <figcaption>Ils ont pas l'air rigolos</figcaption>
           </figure>
           <p>
@@ -149,7 +149,7 @@
             </p>
           </header>
           <figure class="post-thumbnail">
-            <img src="images/Nobuo-Uematsu.png" />
+            <img src="images/Nobuo-Uematsu.png" alt="Nobuo Uematsu" />
             <figcaption>Le GOAT, tout simplement.</figcaption>
           </figure>
           <p>
@@ -168,12 +168,30 @@
         </article>
       </section>
       <section id="media-center">
-        <h2></h2>
+        <h2>Le podcast</h2>
+        <audio src="podcast.mp3" class="podcast-player" controls></audio>
+        <details>
+          <summary>Afficher la transcription</summary>
+          <dl class="transcript-box">
+            <dt>Alex (00:05)</dt>
+            <dd>Salut à tous et bienvenue dans l'émission.</dd>
+            <dt>Sarah (00:12)</dt>
+            <dd>Bonjour Alex, prête à débriefer les sorties du mois.</dd>
+            <dt>Alex (00:18)</dt>
+            <dd>À quel jeu joues-tu en ce moment ?</dd>
+            <dt>Sarah (00:25)</dt>
+            <dd>
+              Je viens de terminer un excellent jeu de plateforme français.
+            </dd>
+          </dl>
+        </details>
       </section>
       <section id="authors-ranking">
-        <h2></h2>
-        <table>
-          <caption></caption>
+        <h2>Classement des rédacteurs</h2>
+        <table class="data-table">
+          <caption>
+            Top des testeurs 2026
+          </caption>
           <thead>
             <tr>
               <th>Rang</th>
@@ -184,39 +202,81 @@
           </thead>
           <tbody>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>1</td>
+              <td>Alex</td>
+              <td>RPG</td>
+              <td>15</td>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>2</td>
+              <td>Sarah</td>
+              <td>Jeux indés</td>
+              <td>12</td>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>3</td>
+              <td>Tom</td>
+              <td>Rétrogaming</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Chloé</td>
+              <td>E-sport</td>
+              <td>6</td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td colspan="4">Total des articles publiés: 42</td>
             </tr>
           </tfoot>
         </table>
       </section>
       <section id="interactive-zone">
-        <h2></h2>
+        <h2>Carte du salon gaming</h2>
+        <img
+          src="images/salon-gaming.png"
+          usemap="#plan-salon"
+          alt="plan du salon"
+          width="300"
+          height="230"
+        />
+        <map name="plan-salon">
+          <area
+            shape="rect"
+            coords="10,10,150,100"
+            href="#zone1"
+            alt="Zone 1"
+          />
+          <area shape="circle" coords="300,150,50" href="#zone2" alt="Zone 2" />
+        </map>
+        <canvas class="stats-canvas" width="400" height="200">
+          Le navigateur ne supporte pas la balise canvas.
+        </canvas>
       </section>
     </main>
     <hr />
-    <footer id="main-footer"></footer>
+    <footer id="main-footer">
+      <address class="contact-info">
+        Pixel Art<br />
+        14 boulevard des Consoles, 69000 Lyon<br />
+        <a href="mailto:redaction@pixeletmanette.fr">
+          redaction@pixeletmanette.fr
+        </a>
+      </address>
+      <ul>
+        <li>
+          <a href="#">Mentions légales</a>
+        </li>
+        <li>
+          <a href="#">Plan du site</a>
+        </li>
+        <li>
+          <a href="#">politique de confidentialité</a>
+        </li>
+      </ul>
+      <p><small class="copyright-text">© 2026 - Tous droits réservés</small></p>
+    </footer>
   </body>
 </html>
