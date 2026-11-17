@@ -1,0 +1,63 @@
+/* Ma palette :
+   - Fond principal : #F5F5F7 (gris très clair)
+   - Texte / Structure : #334155 (gris un peu plus foncé)
+   - Accent : #2563EB (bleu vif)
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f1efef;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #334155;
+}
+#main-header {
+  background-color: #334155;
+  color: #f5f5f7;
+  padding: 1.5rem;
+  text-align: center;
+}
+.nav-list {
+  list-style: none;
+}
+.nav-item {
+  display: inline-block;
+  margin: 1.5rem 1.5rem 0; /*marge en haut (plus joli) et gauche/droite (consignes), sans toucher le bas */
+  color: #93c5fd;
+}
+.nav-item a {
+  text-decoration: none;
+}
+.nav-item a:visited {
+  color: #93c5fd;
+}
+.nav-item a:hover {
+  color: red;
+}
+#main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#latest-posts {
+  font-size: 0;
+}
+.post-card {
+  display: inline-block;
+  width: 48%;
+  margin: 1%;
+  vertical-align: top;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: white;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  box-shadow: 8px 4px;
+  padding-left: 19px;
+}
+.post-thumbnail img {
+  max-width: 100%;
+  height: auto;
+}
